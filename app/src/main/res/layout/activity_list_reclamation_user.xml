@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8FA">
+
+  <RelativeLayout
+      android:id="@+id/action_bar_container"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="@android:color/white"
+      android:elevation="4dp">
+
+    <ImageView
+        android:id="@+id/btnRetour"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:padding="12dp"
+        android:layout_marginStart="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="Bouton retour"
+        android:src="?attr/homeAsUpIndicator"  app:tint="#2C3E50" />
+
+    <TextView
+        android:id="@+id/titrePageReclamations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"  android:text="💡 Mes réclamations"
+        android:textColor="#2C3E50"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+  </RelativeLayout>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/action_bar_container">
+
+    <LinearLayout
+        android:id="@+id/conteneurReclamations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:clipToPadding="false" />
+  </ScrollView>
+</RelativeLayout>

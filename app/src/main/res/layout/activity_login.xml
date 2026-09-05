@@ -1,0 +1,153 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFF8F2">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="32dp">
+
+        <!-- LOGO -->
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="16dp"
+            android:src="@mipmap/safelogot"
+            android:adjustViewBounds="true"
+            android:elevation="8dp"
+            android:scaleType="centerInside" />
+
+        <!-- TITRE -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenue"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#1A1A1A"
+            android:layout_marginBottom="6dp" />
+
+        <!-- SOUS-TITRE -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connectez-vous pour continuer"
+            android:textSize="15sp"
+            android:textColor="#5A5A5A"
+            android:layout_marginBottom="28dp" />
+
+        <!-- EMAIL -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/input_field"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="14dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_email"
+                app:tint="#FF6B36" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Adresse email"
+                android:paddingLeft="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:background="@null" />
+        </LinearLayout>
+
+        <!-- PASSWORD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/input_field"
+            android:paddingHorizontal="16dp"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_lock"
+                app:tint="#FF6B36" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Mot de passe"
+                android:paddingLeft="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:background="@null" />
+        </LinearLayout>
+
+        <!-- LOGIN BUTTON -->
+        <Button
+            android:id="@+id/loginBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Se connecter"
+            android:background="@drawable/rounded_button_orange"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"
+            android:elevation="6dp" />
+
+        <!-- REGISTER BUTTON -->
+        <Button
+            android:id="@+id/registerRedirectBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Créer un compte"
+            android:background="@drawable/rounded_button_orange"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="18dp"
+            android:elevation="6dp" />
+
+        <!-- FORGOT PASSWORD -->
+        <TextView
+            android:id="@+id/tvForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mot de passe oublié ?"
+            android:textColor="#FF6B36"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_gravity="center" />
+
+        <!-- PROGRESS BAR -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"
+            android:indeterminateTint="#FF6B36" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="@color/orange_primary"
+        android:gravity="center"
+        android:text="📝 Déposer une Réclamation"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Sélection image -->
+    <LinearLayout
+        android:id="@+id/selectImageLayout"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/reclamation_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_camera"
+            android:padding="12dp"/>
+    </LinearLayout>
+
+    <!-- Titre -->
+    <EditText
+        android:id="@+id/titlereclamation"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:hint="Titre"
+        android:padding="12dp"
+        android:backgroundTint="#F57C00"
+        app:layout_constraintTop_toBottomOf="@id/selectImageLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Description -->
+    <EditText
+        android:id="@+id/descriptionReclamation"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="12dp"
+        android:hint="Description"
+        android:padding="12dp"
+        android:gravity="top"
+        android:backgroundTint="@color/orange_dark"
+        app:layout_constraintTop_toBottomOf="@id/titlereclamation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Localisation -->
+    <EditText
+        android:id="@+id/locationReclamation"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:hint="Localisation 📍"
+        android:padding="12dp"
+        android:backgroundTint="@color/orange_dark"
+        app:layout_constraintTop_toBottomOf="@id/descriptionReclamation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <!-- Bouton Envoyer -->
+    <Button
+        android:id="@+id/sendReclamationlBtn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:text="Envoyer"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@color/orange_primary"
+        app:layout_constraintTop_toBottomOf="@id/locationReclamation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Bouton Annuler -->
+    <Button
+        android:id="@+id/cancelReclamationBtn"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:text="Annuler"
+        android:textColor="@android:color/black"
+        android:backgroundTint="@color/orange_primary"
+        app:layout_constraintTop_toBottomOf="@id/sendReclamationlBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
